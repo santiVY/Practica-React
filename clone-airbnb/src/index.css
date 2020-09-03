@@ -109,7 +109,7 @@ body {
 }
 
 .housing .contentHousing .content h2{
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .housing .contentHousing .content h5{
@@ -121,7 +121,7 @@ body {
 }
 
 .housing .contentHousing .content img{
-  width: 40%;
+  height: 20%;
   margin-left: 8px;
 }
 
