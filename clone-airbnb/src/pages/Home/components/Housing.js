@@ -38,7 +38,7 @@ const contents = [
 export const Housing = () => ( 
     <section className="housing">
         { 
-            contents.map(content => <ContentHousing image={content.image} description={content.description} place={content.place} price={content.price}/>) 
+            contents.map((content, key) => <ContentHousing key={ key } image={content.image} description={content.description} place={content.place} price={content.price}/>) 
         }
     </section>
 )
