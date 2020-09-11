@@ -8,7 +8,7 @@ import { FramePage } from '../FramePage'
 
 export const HomePage = () => (
     <FramePage>
-        <Title label = 'Discover Airbnb'/>
+        <Title label = 'Discover Airbnb Top 5'/>
         <Ranking />
         <Title label = 'Global housing'/>
         <Housing />
