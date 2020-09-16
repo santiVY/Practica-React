@@ -172,7 +172,43 @@ body {
   height: 40px;
 }
 
-.button:hover{
+ .button:hover {
   opacity: 0.7;
   cursor: pointer;
+}
+
+.button:disabled {
+  background-color: #ccc;
+  cursor: no-drop;
+} 
+
+.booking-form {
+  margin: 15px 0;
+}
+
+.booking-form div {
+  border: 1px solid #ccc;
+  background: #f2f2f2;
+  margin: 10px 0;
+  border-radius: 3px;
+  padding: 0 10px;
+}
+
+
+.booking-form input {
+  width: 100%;
+  padding: 0px;
+  font-weight: 300;
+  outline: none;
+  font-size: 1em;
+  background-color: transparent;
+  border: none;
+  margin: 3px 0;
+  text-transform: uppercase;
+  font-family: 'Lato';
+}
+
+.booking-form label {
+  color: #777;
+  font-size: 0.95em;
 }

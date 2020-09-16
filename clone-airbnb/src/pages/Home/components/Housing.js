@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ContentHousing } from './ContentHousing'
 
 
@@ -50,10 +50,18 @@ const contents = [
     }
 ]
 
-export const Housing = () => ( 
-    <section className="housing">
-        { 
-            contents.map(content => <ContentHousing key={ content.id } id= {content.id} key={ content.id } image={content.image} description={content.description} place={content.place} price={content.price} score={content.score} users={content.users}/>) 
-        }
-    </section>
-)
+export const Housing = () => {
+    
+    //component did mount
+    useEffect (()=>{
+        // http request
+    }, [])
+
+    return ( 
+        <section className="housing">
+           { 
+                contents.map(content => <ContentHousing key={ content.id } id= {content.id} key={ content.id } image={content.image} description={content.description} place={content.place} price={content.price} score={content.score} users={content.users}/>) 
+            }
+        </section>
+    )
+}

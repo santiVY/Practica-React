@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Card } from './Card'
 
 const posts = [
@@ -34,16 +34,24 @@ const posts = [
     }
 ]
 
-export const Ranking = () => ( 
-    <section className="ranking">
-        {/* {   
-            //sprint operator {... el } toma todas la propiedades el arreglo que estoy recorriendo
-            posts.map(post => <Card key={ post.id } { ...post } />) 
-        } */}
-        { 
-        //El key es para corregir el error de java para los operadores map o each con el indice si tiene id colocar el id si no colocar el indice que nos entrega la funcion (map, indice)
-            posts.map(post => <Card key={ post.id } id= {post.id} image={post.image} description={post.description} place ={post.place} />) 
-        }
+export const Ranking = () => {
+    
+    //component did mount
+    useEffect (()=>{
+        // http request
+    }, [])
 
-    </section>
-)
+    return ( 
+        <section className="ranking">
+            {/* {   
+                //sprint operator {... el } toma todas la propiedades el arreglo que estoy recorriendo
+                posts.map(post => <Card key={ post.id } { ...post } />) 
+            } */}
+            { 
+            //El key es para corregir el error de java para los operadores map o each con el indice si tiene id colocar el id si no colocar el indice que nos entrega la funcion (map, indice)
+                posts.map(post => <Card key={ post.id } id= {post.id} image={post.image} description={post.description} place ={post.place} />) 
+            }
+
+        </section>
+    )
+}
