@@ -9,7 +9,7 @@ export const ContentHousing = (props) => (
                 <img src={ props.image }/>
             </div>
             <div className="content">
-                <h2> { props.description }</h2>
+                <h2> { props.title }</h2>
                 <h5>{ props.place }</h5>
                 <p>{ props.price }</p>
                 <Score score={props.score} users={props.users}/>

@@ -1,6 +1,10 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 app.use(express.json())
+//cors es para limitar la solicitud de peticiones por cualquier componente en esta
+//manera app.use(cors()) la conexion se deja abierta
+app.use(cors())
 //urlencoded es para cuando llegue parametros por las rutas se puedan leer bien
 app.use(express.urlencoded({ extended: false }))
 const port = 3001

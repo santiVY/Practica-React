@@ -1,11 +1,16 @@
 import React from 'react'
+import { Score } from '../../../components/Score'
 
+export const CardDetail = (props) => {
 
-export const CardDetail = ({image }) => (
-    <article className="card-detail">
-        <img src={ image } />
-        <p>
-           Excelente lugar para disfrutar en familias
-        </p>
-    </article>
-)
+    return (
+        <article className="card-detail">
+            <img src={props.image}/>
+            <div className="content">
+                <h2> { props.description }</h2>
+                <h3>{ props.place }</h3>
+                <Score score={props.score} users={props.users}/>
+            </div>
+        </article>
+    )
+}
