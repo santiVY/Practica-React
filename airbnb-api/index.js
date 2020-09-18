@@ -9,6 +9,10 @@ app.use(cors())
 app.use(express.urlencoded({ extended: false }))
 const port = 3001
 
+//moongo connection
+require('./connection/connectionDB')
+
+
 //Routes
 const experienciesRoutes = require('./routes/experiences')
 const bookingRoutes = require('./routes/booking')

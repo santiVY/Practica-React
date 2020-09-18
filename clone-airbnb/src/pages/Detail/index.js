@@ -35,7 +35,7 @@ export const DetailPage = () => {
     return (
         <FramePage>
             <Title label = {experiencie.title}/> 
-            <CardDetail image = {experiencie.image} description = {experiencie.description} place = {experiencie.place} score = {experiencie.score} users = {experiencie.users}/>
+            <CardDetail {...experiencie}/> {/* <CardDetail image = {experiencie.image} description = {experiencie.description} place = {experiencie.place} score = {experiencie.score} users = {experiencie.users}/> */}
             <Button isLink={ true } linkTo={`/booking/${ id }`} label = "¡Reserva ahora!" style={ buttonStyle }/>
         </FramePage>
     )

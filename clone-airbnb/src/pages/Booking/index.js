@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { FramePage } from '../FramePage'
 import { Button } from '../../components/Button'
 import { useParams } from 'react-router-dom'
+import { requestHttp } from '../../config/HttpRequest'
+import swal from 'sweetalert';
 
 export const BookingPage = () => {
 
@@ -18,23 +20,31 @@ export const BookingPage = () => {
     const bookingHandler = (event) => {
         event.preventDefault()
         requestBooking()
+        makeBooking()
     }
 
     const requestBooking  = () => {
         const body = {
-            id,
-            name, // name: name (Esto es lo mismo)
-            phone,
-            email, //email_address: email
-            date
+            id, // id: id (Esto es lo mismo)
+            nombre: name, 
+            correo: email,
+            fecha: date,
+            telefono: phone
         }
-        console.log(body)
+       return body
     }
 
-    //component did mount
-    useEffect (()=>{
-        // http request
-    }, [])
+    const makeBooking = async () => {
+        const bodyJson = requestBooking();
+        console.log(bodyJson)
+        try {
+             const response = await requestHttp('post', '/booking', bodyJson)
+             console.log('response', response)
+             swal(`Buen trabajo ${name}`, `Se creo la reserva exitosamente`, "success");
+        } catch (error) {
+            console.error(error)
+        }
+    }
 
     //useEffect ejecuta la fucniona si escucha alguna de las variables
     useEffect(() => {
