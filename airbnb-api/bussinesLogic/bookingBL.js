@@ -1,10 +1,10 @@
 const BookingModel = require('../model/booking_model')
 
-const sendBooking = (booking) => {
+const sendBooking = async (booking) => {
 
     try {
         
-        BookingModel(booking).save()
+         await BookingModel(booking).save()
 
         console.log(`Se ha realizado su reserva con:
         id: ${booking.experience_id} 

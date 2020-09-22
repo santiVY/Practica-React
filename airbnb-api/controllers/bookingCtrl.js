@@ -1,6 +1,6 @@
 const  sendBooking  = require('../bussinesLogic/bookingBL')
 
-const booking = (req, res) => {
+const booking = async (req, res) => {
    const booking = {
        experience_id,
        name,
@@ -8,7 +8,7 @@ const booking = (req, res) => {
        booking_date,
        phone
      } = req.body
-     res.status(201).json(sendBooking(booking))
+    res.status(201).json( await sendBooking(booking))
 }
 
 
