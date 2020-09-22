@@ -22,7 +22,7 @@ export const Housing = () => {
     return ( 
         <section className="housing">
            { 
-                housing.map(el => <ContentHousing key = {el.id} {...el} />)
+                housing.map(el => <ContentHousing key = {el._id} {...el} />)
             }
         </section>
     )

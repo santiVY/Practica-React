@@ -28,7 +28,7 @@ export const Ranking = () => {
             } */}
             { 
             //El key es para corregir el error de java para los operadores map o each con el indice si tiene id colocar el id si no colocar el indice que nos entrega la funcion (map, indice)
-            top5.map(post => <Card key={ post.id } id= {post.id} image={post.image} title={post.title} place ={post.place} />) 
+            top5.map(post => <Card key={ post._id } {...post} />) 
             }
 
         </section>

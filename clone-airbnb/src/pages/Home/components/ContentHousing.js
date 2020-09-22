@@ -3,7 +3,7 @@ import { Score } from '../../../components/Score'
 import { Link } from 'react-router-dom'
 
 export const ContentHousing = (props) => (
-    <Link className="link" to={ `/detail/${props.id}?image=${props.image}` }>
+    <Link className="link" to={ `/detail/${props._id}?image=${props.image}` }>
         <section className="contentHousing">
             <div className="image">
                 <img src={ props.image }/>

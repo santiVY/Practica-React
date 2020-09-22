@@ -25,11 +25,11 @@ export const BookingPage = () => {
 
     const requestBooking  = () => {
         const body = {
-            id, // id: id (Esto es lo mismo)
-            nombre: name, 
-            correo: email,
-            fecha: date,
-            telefono: phone
+            experience_id: id, // id: id (Esto es lo mismo)
+            name: name, 
+            email: email,
+            phone: phone,
+            booking_date: date
         }
        return body
     }
